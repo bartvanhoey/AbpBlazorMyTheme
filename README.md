@@ -78,7 +78,7 @@ abp new AbpBlazorMyTheme -u blazor
    dotnet add package Volo.Abp.UI.Navigation
 ```
 
-*Remove or comment out the project references. See image below.
+* Remove or comment out the project references. See image below.
 
 ![Nuget packages added](images/nuget_packages_added_in_theming_csproj.jpg)
 
@@ -108,7 +108,7 @@ abp new AbpBlazorMyTheme -u blazor
 
 * Create an **assets** folder to the **wwwroot** folder of the **Blazor** project and copy/paste the **abp logo** in the **assets** folder.  You can find a copy of the logo [here](https://github.com/bartvanhoey/AbpBlazorMyTheme/blob/gh-pages/src/AbpBlazorMyTheme.Blazor/wwwroot/assets/abp-logo-light.svg).
 
-*Open file **Branding.razor** in the **BasicTheme** project and update with the code below
+* Open file **Branding.razor** in the **BasicTheme** project and update with the code below
 
 ```html
    @using Volo.Abp.Ui.Branding
@@ -117,7 +117,7 @@ abp new AbpBlazorMyTheme -u blazor
    <a class="navbar-brand" href="https://abp.io/"><img src="/assets/abp-logo-light.svg" class="home-logo"></a>
 ```
 
-## Run both the [YourProjectName].Blazor and [AbpBlazorMyTheme].HttpApi.Host project
+## Start the application by running both the Blazor and HttpApi.Host project
 
 Et voilà! This is the result.
 
