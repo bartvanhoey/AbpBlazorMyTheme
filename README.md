@@ -127,6 +127,6 @@ You can now modify the theme, add your custom css/js files, or your custom ViewC
 
 Find more about adding global styles/scripts and other fundamentals about ABP theming [here](https://docs.abp.io/en/abp/latest/UI/AspNetCore/Theming).
 
-Get the [source code](source code) on GitHub.
+Get the [source code](https://github.com/bartvanhoey/AbpBlazorMyTheme) on GitHub.
 
 Enjoy and have fun!
