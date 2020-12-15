@@ -58,7 +58,7 @@ abp new AbpBlazorMyTheme -u blazor
 
 ![Remove or Comment out](images/remove_or_comment_out_in_blazor_csproj.jpg)
 
-## Build the Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme project and fix errors
+## Build the BasicTheme project and fix the build errors
 
 * Open file **Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj** and remove or comment out the following lines.
 
