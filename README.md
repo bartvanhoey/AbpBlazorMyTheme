@@ -64,7 +64,7 @@ abp new AbpBlazorMyTheme -u blazor
 
 ![Remove or Comment out](images/remove_or_comment_out_in_basictheme_csproj.jpg)
 
-* Open file **Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj** and do the same
+* Open file **Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj** and do the same.
 
 ![Remove or Comment out](images/remove_or_comment_out_in_theming_csproj.jpg)
 
