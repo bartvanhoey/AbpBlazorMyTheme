@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this article, I will show you how to create a new UI theme in a Blazor APB application by copying the Basic Theme and make some changes to it.
+In this article, I will show you how to create a new UI theme in a **Blazor APB application** by copying the **Basic Theme** and make some changes to it.
 
-The sample application in this GitHub repository has been developed with **Blazor** as the UI framework and **SQL Server** as the database provider.
+The sample application in this **GitHub** repository has been developed with **Blazor** as UI framework and **SQL Server** as database provider.
 
 ### Source Code
 
@@ -70,7 +70,7 @@ Open file **Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj** and r
 
 Open file **Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj** and do the same
 
-![Remove or Comment out](images/remove_or_comment_out_in_theming_csproj.jpg.jpg)
+![Remove or Comment out](images/remove_or_comment_out_in_theming_csproj.jpg)
 
 Open a command prompt in the **WebAssembly.Theming** project and add nuget packages needed by the commands below.
 
