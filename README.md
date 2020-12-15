@@ -107,5 +107,27 @@ Open file **theme.css** in the **Volo.Abp.AspNetCore.Components.WebAssembly.Basi
 ```
 
 Create an **assets** folder to the **wwwroot** folder of the **Blazor** project and copy/paste the **abp logo** in the **assets** folder. 
-You can find a copy of the logo [here](https://github.com/bartvanhoey/AbpBlazorMyTheme/blob/gh-pages/src/AbpBlazorMyTheme.Blazor/wwwroot/assets/abp-logo-light.svg)
+You can find a copy of the logo [here](https://github.com/bartvanhoey/AbpBlazorMyTheme/blob/gh-pages/src/AbpBlazorMyTheme.Blazor/wwwroot/assets/abp-logo-light.svg).
 
+Open file **Branding.razor** in the **BasicTheme** project and update with the code below
+
+```html
+   @using Volo.Abp.Ui.Branding
+   @inject IBrandingProvider BrandingProvider
+   @* <a class="navbar-brand" href="">@BrandingProvider.AppName</a> *@
+   <a class="navbar-brand" href="https://abp.io/"><img src="/assets/abp-logo-light.svg" class="home-logo"></a>
+```
+
+## Run both the [YourProjectName].Blazor and [AbpBlazorMyTheme].HttpApi.Host project
+
+Et voilà! This is the result.
+
+![Blazor Up and Running with custom style](images/running_blazor_with_custom_style.jpg)
+
+You can now modify the theme, add your custom css/js files, or your custom ViewComponents, etc.
+
+Find more about adding global styles/scripts and other fundamentals about ABP theming [here](https://docs.abp.io/en/abp/latest/UI/AspNetCore/Theming).
+
+Get the [source code](source code) on GitHub.
+
+Enjoy and have fun!
