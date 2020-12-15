@@ -107,3 +107,5 @@ Open file **theme.css** in the **Volo.Abp.AspNetCore.Components.WebAssembly.Basi
 ```
 
 Create an **assets** folder to the **wwwroot** folder of the **Blazor** project and copy/paste the **abp logo** in the **assets** folder. 
+You can find a copy of the logo [here](https://github.com/bartvanhoey/AbpBlazorMyTheme/blob/gh-pages/src/AbpBlazorMyTheme.Blazor/wwwroot/assets/abp-logo-light.svg)
+
