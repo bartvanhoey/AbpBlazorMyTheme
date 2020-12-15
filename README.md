@@ -42,37 +42,35 @@ abp new AbpBlazorMyTheme -u blazor
 
 ## Copy Components.WebAssembly.BasicTheme and Components.WebAssembly.Theming project to the src folder of your project
 
-Open a command prompt and clone the [apb repository](https://github.com/abpframework/abp) into your computer.
+* Open a command prompt and clone the [apb repository](https://github.com/abpframework/abp) into your computer.
 
 ```bash
    git clone https://github.com/abpframework/abp
 ```
 
-Once the cloning is done, navigate to the `framework\src` folder of the repository and copy both the `Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme` and `Volo.Abp.AspNetCore.Components.WebAssembly.Theming` projects into the `src` folder of your project.
+* Once the cloning is done, navigate to the `framework\src` folder of the repository and copy both the `Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme` and `Volo.Abp.AspNetCore.Components.WebAssembly.Theming` projects into the `src` folder of your project.
 
 ![src folder structure](images/src_folder_structure.jpg)
 
 ## Remove the Package Reference of the Basic Theme in the Blazor project
 
-Open the `[YourProjectName].Blazor.csproj` file and remove or comment out the line below.
-
-```bash
-   <PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme" Version="4.0.1" />
-```
+* Open the `[YourProjectName].Blazor.csproj` file and remove or comment out the **BasicTheme** package reference.
 
 ![Remove or Comment out](images/remove_or_comment_out_in_blazor_csproj.jpg)
 
 ## Build the Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme project and fix errors
 
-Open file **Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj** and remove or comment out the following lines.
+* Open file **Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj** and remove or comment out the following lines.
 
 ![Remove or Comment out](images/remove_or_comment_out_in_basictheme_csproj.jpg)
 
-Open file **Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj** and do the same
+* Open file **Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj** and do the same
 
 ![Remove or Comment out](images/remove_or_comment_out_in_theming_csproj.jpg)
 
-Open a command prompt in the **WebAssembly.Theming** project and add nuget packages needed by the commands below.
+* Open a command prompt in the **WebAssembly.BasicTheme** project and run `dotnet build`. The build will fail because of missing nuget packages.
+
+* Open a command prompt in the **WebAssembly.Theming** project and add nuget packages needed by the commands below.
 
 ```bash
    dotnet add package Volo.Abp.BlazoriseUI
@@ -80,21 +78,23 @@ Open a command prompt in the **WebAssembly.Theming** project and add nuget packa
    dotnet add package Volo.Abp.UI.Navigation
 ```
 
-Remove or comment out the project references. See image below.
+*Remove or comment out the project references. See image below.
 
 ![Nuget packages added](images/nuget_packages_added_in_theming_csproj.jpg)
 
+* Open a command prompt in the **WebAssembly.BasicTheme** project and run `dotnet build` again. The build should succeed by now!
+
 ## Add project reference to the BasicTheme project in the Blazor.csproj file
 
-Open a command prompt in the Blazor project of your application and enter the command below to add a project reference.
+* Open a command prompt in the Blazor project of your application and enter the command below to add a project reference.
 
 ```bash
    dotnet add reference ../../src/Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme/Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj
 ```
 
-## Add some custom style to the BasicTheme project
+## Add some custom styles to the BasicTheme project
 
-Open file **theme.css** in the **Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme** and add following css classes.
+* Open file **theme.css** in the **Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme** and add following css classes.
 
 ```html
    .bg-dark{
@@ -106,10 +106,9 @@ Open file **theme.css** in the **Volo.Abp.AspNetCore.Components.WebAssembly.Basi
    }
 ```
 
-Create an **assets** folder to the **wwwroot** folder of the **Blazor** project and copy/paste the **abp logo** in the **assets** folder. 
-You can find a copy of the logo [here](https://github.com/bartvanhoey/AbpBlazorMyTheme/blob/gh-pages/src/AbpBlazorMyTheme.Blazor/wwwroot/assets/abp-logo-light.svg).
+* Create an **assets** folder to the **wwwroot** folder of the **Blazor** project and copy/paste the **abp logo** in the **assets** folder.  You can find a copy of the logo [here](https://github.com/bartvanhoey/AbpBlazorMyTheme/blob/gh-pages/src/AbpBlazorMyTheme.Blazor/wwwroot/assets/abp-logo-light.svg).
 
-Open file **Branding.razor** in the **BasicTheme** project and update with the code below
+*Open file **Branding.razor** in the **BasicTheme** project and update with the code below
 
 ```html
    @using Volo.Abp.Ui.Branding
