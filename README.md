@@ -40,7 +40,7 @@ abp new AbpBlazorMyTheme -u blazor
 * Run the `AbpBlazorMyTheme.HttpApi.Host` application to start the server side.
 * Run the `AbpBlazorMyTheme.Blazor` application to start the Blazor UI project.
 
-## Copy Components.WebAssembly.BasicTheme and Components.WebAssembly.Theming project to the src folder of your project
+## Copy BasicTheme and Theming project to the src folder of your project
 
 * Open a command prompt and clone the [apb repository](https://github.com/abpframework/abp) into your computer.
 
