@@ -10,7 +10,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Volo.Abp.AspNetCore.Components.WebAssembly.Theming\Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj" />
+      <PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.Theming" Version="4.0.1" />
     </ItemGroup>
+
+    <!-- <ItemGroup>
+      <ProjectReference Include="..\Volo.Abp.AspNetCore.Components.WebAssembly.Theming\Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj" />
+    </ItemGroup> -->
 
 </Project>

@@ -40,7 +40,7 @@ abp new AbpBlazorMyTheme -u blazor
 * Run the `AbpBlazorMyTheme.HttpApi.Host` application to start the server side.
 * Run the `AbpBlazorMyTheme.Blazor` application to start the Blazor UI project.
 
-## Copy BasicTheme and Theming project to the src folder of your project
+## Copy BasicTheme to the src folder of your project
 
 * Open a command prompt and clone the [apb repository](https://github.com/abpframework/abp) into your computer.
 
@@ -48,7 +48,7 @@ abp new AbpBlazorMyTheme -u blazor
    git clone https://github.com/abpframework/abp
 ```
 
-* Once the cloning is done, navigate to the `framework\src` folder of the repository and copy both the `Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme` and `Volo.Abp.AspNetCore.Components.WebAssembly.Theming` projects into the `src` folder of your project.
+* Once the cloning is done, navigate to the `framework\src` folder of the repository and copy the `Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme` project into the `src` folder of your project.
 
 ![src folder structure](images/src_folder_structure.jpg)
 
@@ -64,33 +64,25 @@ abp new AbpBlazorMyTheme -u blazor
 
 ![Remove or Comment out](images/remove_or_comment_out_in_basictheme_csproj.jpg)
 
-* Open file **Volo.Abp.AspNetCore.Components.WebAssembly.Theming.csproj** and do the same.
+* Open a command prompt in the **WebAssembly.BasicTheme** project and run `dotnet build`. The build will fail because of missing **Volo.Abp.AspNetCore.Components.WebAssembly.Theming** nuget packages.
 
-![Remove or Comment out](images/remove_or_comment_out_in_theming_csproj.jpg)
-
-* Open a command prompt in the **WebAssembly.BasicTheme** project and run `dotnet build`. The build will fail because of missing nuget packages.
-
-* Open a command prompt in the **WebAssembly.Theming** project and add nuget packages needed by the commands below.
+* Run the command below to install the missing nuget packages.
 
 ```bash
-   dotnet add package Volo.Abp.BlazoriseUI
-   dotnet add package Volo.Abp.Http.Client.IdentityModel.WebAssembly
-   dotnet add package Volo.Abp.UI.Navigation
+   abp add-package Volo.Abp.AspNetCore.Components.WebAssembly.Theming
 ```
 
-* Remove or comment out the project references. See image below.
+* When you run `dotnet build` again in the **BasicTheme** project, the build should succeed by now!
 
-![Nuget packages added](images/nuget_packages_added_in_theming_csproj.jpg)
+## Add a project reference to the BasicTheme project in the Blazor.csproj file
 
-* Open a command prompt in the **WebAssembly.BasicTheme** project and run `dotnet build` again. The build should succeed by now!
-
-## Add project reference to the BasicTheme project in the Blazor.csproj file
-
-* Open a command prompt in the Blazor project of your application and enter the command below to add a project reference.
+* Open a command prompt in the **Blazor** project of your application and enter the command below to add a project reference to the **BasicTheme** project.
 
 ```bash
    dotnet add reference ../../src/Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme/Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj
 ```
+
+* Run `dotnet build` in the **Blazor** project to see the project builds successfully!
 
 ## Add some custom styles to the BasicTheme project
 
